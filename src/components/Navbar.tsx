@@ -128,7 +128,7 @@ export default function Navbar() {
             >
               <Button
                 as={Link}
-                href="/images/TrietNgoCV-1208.pdf"
+                href="/images/TrietNgoCV.pdf"
                 download="TrietNgoCV.pdf"
                 colorScheme="blue"
                 variant="outline"
@@ -165,7 +165,7 @@ export default function Navbar() {
               <Flex justify="space-between" align="center">
                 <Button
                   as={Link}
-                  href="/images/TrietNgoCV-1208.pdf"
+                  href="/images/TrietNgoCV.pdf"
                   download="TrietNgoCV.pdf"
                   colorScheme="blue"
                   variant="outline"

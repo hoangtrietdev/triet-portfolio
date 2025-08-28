@@ -56,7 +56,7 @@ const HeroSection = () => {
             <HStack spacing={4} mt={8}>
               <Button
                 as={Link}
-                href="/images/TrietNgoCV-1208.pdf"
+                href="/images/TrietNgoCV.pdf"
                 download="TrietNgoCV.pdf"
                 size="lg"
                 colorScheme="blue"
