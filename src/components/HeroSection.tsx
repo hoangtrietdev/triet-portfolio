@@ -39,6 +39,7 @@ const HeroSection = () => {
               bgGradient="linear(to-r, blue.300, purple.400, pink.300)"
               bgClip="text"
               mb={4}
+              pb={2}
               fontWeight="bold"
             >
               Triet Ngo Phu Hoang
