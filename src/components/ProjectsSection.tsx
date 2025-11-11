@@ -13,7 +13,7 @@ import {
   Icon,
 } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
-import { FiExternalLink, FiGithub } from 'react-icons/fi'
+import { FiExternalLink } from 'react-icons/fi'
 
 const MotionBox = motion.div
 
@@ -27,7 +27,20 @@ const ProjectsSection = () => {
       description: 'Engineered a comprehensive study abroad guidance platform using Next.js, TypeScript, and Supabase. Integrated Groq AI API for real-time chatbot assistance across 8 roadmap stages with bilingual support (English/Vietnamese), achieving 99.9% uptime.',
       technologies: ['Next.js', 'TypeScript', 'Supabase', 'Groq AI API', 'React Query'],
       liveUrl: 'https://studyoverseasmap.com/',
+    },
+    {
+      title: 'Organ Insight 3D',
+      description: 'Developed an advanced medical imaging platform using Three.js, TypeScript, and Groq AI API. Implemented X-ray image scanning with AI-powered health status analysis and interactive 3D organ visualization, providing real-time diagnostic insights and immersive 3D model rendering for enhanced medical understanding.',
+      technologies: ['Three.js', 'TypeScript', 'Groq AI API', 'Next.js', 'WebGL'],
+      liveUrl: 'https://organ-insight3-d.vercel.app/',
+    },
+    {
+      title: 'Parallel Analyzer',
+      description: 'Built an intelligent code analysis tool using C++, LLVM, Python, and React. Implemented a sophisticated 6-phase hybrid strategy with Groq AI API and OpenMP integration to automatically detect parallelizable code sections, analyze dependencies, and suggest optimization opportunities for high-performance computing applications.',
+      technologies: ['C++', 'LLVM', 'Python', 'React', 'TypeScript', 'Groq AI API', 'OpenMP'],
+      liveUrl: 'https://parallel-analyzer.duckdns.org/',
     }
+
   ]
 
   return (
