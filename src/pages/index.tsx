@@ -21,6 +21,10 @@ const ExperienceSection = dynamic(() => import('../components/ExperienceSection'
   loading: () => null
 })
 
+const EducationSection = dynamic(() => import('../components/EducationSection'), {
+  loading: () => null
+})
+
 const ProjectsSection = dynamic(() => import('../components/ProjectsSection'), {
   loading: () => null
 })
@@ -49,6 +53,7 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <ExperienceSection />
+        <EducationSection />
         <ProjectsSection />
         <CertificationsSection />
         <ContactSection />

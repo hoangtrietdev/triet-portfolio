@@ -9,50 +9,76 @@ import {
   Text,
   Badge,
   HStack,
+  List,
+  ListItem,
+  ListIcon,
 } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
+import { MdCheckCircle } from 'react-icons/md'
 
 const MotionBox = motion.div
+
+interface Experience {
+  title: string
+  company: string
+  location: string
+  period: string
+  highlights: string[]
+  technologies: string[]
+}
 
 const ExperienceSection = () => {
   const cardBg = 'gray.800'
   const textColor = 'gray.300'
 
-  const experiences = [
+  const experiences: Experience[] = [
     {
       title: 'Software Engineer - Technical Architect',
       company: 'ONE Tech Stop Viet Nam',
-      period: 'Jul 2024 - Present',
-      description: 'Design and maintain overall architecture of Design System project codebase. Migrated testing system to Playwright and Vitest, reducing test pipeline duration threefold. Set up SonarCloud integration achieving 90%+ test coverage. Implemented Dependabot and Google\'s distroless images, eliminating 100% of critical security issues.',
-      technologies: ['React', 'TypeScript', 'Playwright', 'Vitest', 'SonarCloud', 'Docker'],
-    },
-    {
-      title: 'Software Engineer',
-      company: 'Freelance VNUK',
-      period: 'Mar 2024 - Mar 2025',
-      description: 'Built core APIs for the university from scratch, reducing data retrieval time by 30%. Led system design and product delivery planning, increasing project completion rate by 40%. Optimized image assets and implemented lazy loading, reducing website loading time by 50%. Mentored a team of three developers.',
-      technologies: ['Node.js', 'React', 'TypeScript', 'System Design', 'Performance Optimization'],
+      location: 'Da Nang, Vietnam',
+      period: 'Jul 2024 - Jul 2025',
+      highlights: [
+        'Architected the company\'s Design System; established Git strategy, release, and hotfix workflows.',
+        'Migrated testing to Playwright/Vitest, reducing pipeline duration by 3x compared to Cypress.',
+        'Integrated SonarCloud and Dependabot, achieving >90% test coverage and eliminating 100% of critical security issues.',
+        'Received an Outstanding Performance Review for contributions.',
+      ],
+      technologies: ['React', 'TypeScript', 'Playwright', 'Vitest', 'SonarCloud', 'Docker', 'Git'],
     },
     {
       title: 'Software Engineer',
       company: 'mesoneer',
+      location: 'Ho Chi Minh, Vietnam',
       period: 'Apr 2023 - Jul 2024',
-      description: 'Orchestrated Docker implementation, optimizing deployment processes and boosting efficiency by 40%. Restructured legacy codebase from Blaze template into React components, reducing website loading time by 30%. Streamlined cron job code, decreasing system runtime by 20% for 200,000 users.',
-      technologies: ['React', 'Docker', 'Node.js', 'MongoDB', 'DevOps', 'Performance Optimization'],
+      highlights: [
+        'Reduced API latency by 90% by refactoring core logic and optimizing query planners with strategic indexing (200k users).',
+        'Orchestrated Docker implementation, optimizing deployment processes and boosting efficiency by 40%.',
+        'Restructured legacy codebase (Blaze template to React components), reducing website loading time by 30%.',
+      ],
+      technologies: ['React', 'Docker', 'Node.js', 'MongoDB', 'Query Optimization', 'Performance Optimization'],
     },
     {
       title: 'Software Engineer',
       company: 'Atherlabs - Sipher',
+      location: 'Ho Chi Minh, Vietnam',
       period: 'Jan 2022 - Feb 2023',
-      description: 'Engineered template repository and UI library with optimized configurations, reducing setup time by 35%. Implemented cron jobs to collect blockchain data in data lake, reducing release time by 30%. Created AWS Lambda functions to stream data from DynamoDB to OpenSearch, improving search functionality by 20%.',
+      highlights: [
+        'Implemented cron jobs to collect and store blockchain data in the data lake, reducing release time by 30%.',
+        'Created AWS Lambda functions to stream data from DynamoDB to OpenSearch, improving search functionality by 20% and saving more than 5000 USD monthly for queries.',
+      ],
       technologies: ['React', 'AWS Lambda', 'DynamoDB', 'OpenSearch', 'Blockchain', 'Node.js'],
     },
     {
       title: 'Tool and Game Engineer',
-      company: 'Gear Game - Riot Games Extension',
+      company: 'Gear Game - Riot Games Extension team',
+      location: 'Da Nang, Vietnam',
       period: 'Apr 2020 - Jan 2022',
-      description: 'Maintained and developed new features for Legends of Runeterra across multiple major events. Wrote migration scripts affecting over 1 million users. Recognized with Outstanding performance review. Acted as second key member responsible for releasing features and coordinating large-scale code merges across global teams.',
-      technologies: ['Game Development', 'Migration Scripts', 'Global Deployment', 'Performance Optimization'],
+      highlights: [
+        'Developed a critical migration script to resolve data integrity issues for 1 million global accounts affected by network latency.',
+        'Built an internal Game Data Version Control system that replaced legacy Excel workflows, resulting in a 30% increase in release speed and successful scale-out to 10+ teams.',
+        'Coordinated large-scale code merges (>40,000 files) across global teams for Legends of Runeterra (Riot Games).',
+      ],
+      technologies: ['Game Development', 'Migration Scripts', 'Version Control Systems', 'Global Deployment'],
     },
   ]
 
@@ -87,15 +113,25 @@ const ExperienceSection = () => {
                       <Text fontSize="xl" fontWeight="semibold" color="purple.300">
                         {exp.company}
                       </Text>
+                      <Text fontSize="sm" color="gray.400">
+                        {exp.location}
+                      </Text>
                     </VStack>
                     <Badge colorScheme="blue" fontSize="sm" px={3} py={1} borderRadius="full">
                       {exp.period}
                     </Badge>
                   </Flex>
                   
-                  <Text color={textColor} mb={4} fontSize="lg" lineHeight="1.7">
-                    {exp.description}
-                  </Text>
+                  <List spacing={3} mb={4}>
+                    {exp.highlights.map((highlight, highlightIndex) => (
+                      <ListItem key={highlightIndex} display="flex" alignItems="flex-start">
+                        <ListIcon as={MdCheckCircle} color="green.400" mt={1} />
+                        <Text color={textColor} fontSize="md" lineHeight="1.6">
+                          {highlight}
+                        </Text>
+                      </ListItem>
+                    ))}
+                  </List>
                   
                   <HStack spacing={3} flexWrap="wrap">
                     {exp.technologies.map((tech, techIndex) => (
