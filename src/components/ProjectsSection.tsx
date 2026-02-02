@@ -34,7 +34,7 @@ const ProjectsSection = () => {
       title: 'Organ Insight 3D',
       description: 'Developed an advanced medical imaging platform using Three.js, TypeScript, and Groq AI API. Implemented X-ray image scanning with AI-powered health status analysis and interactive 3D organ visualization, providing real-time diagnostic insights and immersive 3D model rendering for enhanced medical understanding.',
       technologies: ['Three.js', 'TypeScript', 'Groq AI API', 'Next.js', 'WebGL'],
-      liveUrl: 'https://organ-insight3-d.vercel.app/',
+      liveUrl: 'https://github.com/hoangtrietdev/OrganInsight3D',
       featured: true,
     },
     {
