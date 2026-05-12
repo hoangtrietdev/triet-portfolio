@@ -31,6 +31,20 @@ const ProjectsSection = () => {
       featured: true,
     },
     {
+      title: 'Guitar Training App',
+      description: 'A focused guitar learning app with interactive exercises and guided practice sessions to help build technique and rhythm.',
+      technologies: ['Next.js', 'TypeScript', 'React', 'Audio'],
+      liveUrl: 'https://guitar-training-app.vercel.app/',
+      featured: true,
+    },
+    {
+      title: 'Multi-Agent Video & Comic Editor',
+      description: 'An AI-assisted editor that turns images into short videos and comic-style stories with automated scene and layout generation.',
+      technologies: ['Next.js', 'TypeScript', 'React', 'AI'],
+      liveUrl: 'https://multi-agent-video-editor.vercel.app/',
+      featured: true,
+    },
+    {
       title: 'Organ Insight 3D',
       description: 'Developed an advanced medical imaging platform using Three.js, TypeScript, and Groq AI API. Implemented X-ray image scanning with AI-powered health status analysis and interactive 3D organ visualization, providing real-time diagnostic insights and immersive 3D model rendering for enhanced medical understanding.',
       technologies: ['Three.js', 'TypeScript', 'Groq AI API', 'Next.js', 'WebGL'],
@@ -64,7 +78,7 @@ const ProjectsSection = () => {
       technologies: ['Next.js', 'TypeScript', 'React', 'Game API'],
       liveUrl: 'https://tft-coach-nine.vercel.app/',
       featured: false,
-    }
+    },
   ]
 
   const featuredProjects = projects.filter(p => p.featured)
