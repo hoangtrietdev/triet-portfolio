@@ -129,7 +129,7 @@ const EducationSection = () => {
                         {edu.school}
                       </Text>
                       {edu.gpa && (
-                        <Badge colorScheme="green" fontSize="md" px={3} py={1} borderRadius="md">
+                        <Badge colorScheme="green" fontSize="md" px={3} py={1} mb={2} borderRadius="md">
                           GPA: {edu.gpa}
                         </Badge>
                       )}
