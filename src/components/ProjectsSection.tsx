@@ -31,6 +31,13 @@ const ProjectsSection = () => {
       featured: true,
     },
     {
+      title: 'MasterML',
+      description: 'Developed MasterML, an AI-powered machine learning learning platform using Next.js, TypeScript, and Groq AI API. Features interactive tutorials, real-time code execution, and personalized learning paths to help users master machine learning concepts effectively.',
+      technologies: ['Next.js', 'TypeScript', 'Groq AI API', 'React', 'Code Execution'],
+      liveUrl: 'https://masterml.vercel.app/',
+      featured: true,
+    },
+    {
       title: 'Guitar Training App',
       description: 'A focused guitar learning app with interactive exercises and guided practice sessions to help build technique and rhythm.',
       technologies: ['Next.js', 'TypeScript', 'React', 'Audio'],
@@ -49,7 +56,7 @@ const ProjectsSection = () => {
       description: 'Developed an advanced medical imaging platform using Three.js, TypeScript, and Groq AI API. Implemented X-ray image scanning with AI-powered health status analysis and interactive 3D organ visualization, providing real-time diagnostic insights and immersive 3D model rendering for enhanced medical understanding.',
       technologies: ['Three.js', 'TypeScript', 'Groq AI API', 'Next.js', 'WebGL'],
       liveUrl: 'https://github.com/hoangtrietdev/OrganInsight3D',
-      featured: true,
+      featured: false,
     },
     {
       title: 'Parallel Analyzer',
